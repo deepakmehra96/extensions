@@ -1,0 +1,26 @@
+{
+    "name": "Auto Scroller",
+    "version": "1.0",
+    "description": "Auto Scroller",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["https://github.com/*"],
+            "js": ["./autoScroller.js"]
+        }
+    ],
+    "permissions": ["tabs", "storage"],
+    "background": {
+        "service_worker": "./background.js"
+      },
+    "action": {
+        "default_icon": {
+            "16": "icon.png",
+            "32": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        },
+        "default_title": "Scroller",
+        "default_popup": "popup.html"
+    }
+}
